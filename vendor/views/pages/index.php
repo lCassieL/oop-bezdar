@@ -1,8 +1,8 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+<div>
+    <?php foreach($this->articles as $article):?>
+    <h2><?= $article['title']?></h2>
+    <p><?= $article['text']?></p>
+    <p><?= $article['date']?></p>
+    <?php endforeach;?>
+</div>
 
