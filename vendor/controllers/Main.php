@@ -1,16 +1,13 @@
 <?php
 namespace controllers;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Main
- *
- * @author web
- */
-class Main {
-    //put your code here
+use core\controllers\Main as BaseController;
+class Main extends BaseController{
+    public function __construct() {
+        parent::__construct();
+        $this->model = new Articles();
+    }
+    public function index(){
+        $this->view->articles = $this->model->getAll();
+        $this->view->render();
+    }
 }
