@@ -8,6 +8,7 @@ class Main extends BaseController{
         $this->model = new Articles();
     }
     public function index(){
+        $this->view->page = 'index';
         $this->view->articles = $this->model->getAll();
         $this->view->render();
     }
