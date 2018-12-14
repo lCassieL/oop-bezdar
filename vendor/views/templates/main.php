@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include_once 'vendor/views/'.$this->page.'.php';
+        include_once 'vendor/views/pages/'.$this->page.'.php';
         ?>
     </body>
 </html>

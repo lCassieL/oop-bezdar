@@ -16,7 +16,7 @@ class Router {
         if(!method_exists($controller, $action)){
             self::pageNotFound();
         }
-        $controller->action();
+        $controller->$action();
     }
     
     static public function pageNotFound(){
